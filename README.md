@@ -2,6 +2,8 @@
 
 **Audience intelligence for Pakistani footwear brands.** Live app: **https://usamahanif349.github.io/joota-pulse/**
 
+![Joota Pulse home screen](preview.jpg)
+
 Joota Pulse reads 6,724 real public YouTube comments about Borjan, Servis, Ndure, Stylo, Metro, Hush Puppies, Insignia and ECS, and shows a brand's marketing team:
 
 - **Missed sales:** buyers who asked about price, stock or delivery and never got a reply (an estimate you can adjust)
