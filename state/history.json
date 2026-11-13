@@ -71,5 +71,78 @@
    "own_q": 38,
    "own_answered": 0
   }
+ },
+ {
+  "date": "2026-11-13",
+  "all": {
+   "comments": 6826,
+   "buying": 1032,
+   "waiting": 706,
+   "own_q": 65,
+   "own_answered": 1
+  },
+  "core": {
+   "comments": 2808,
+   "buying": 331,
+   "waiting": 223,
+   "own_q": 14,
+   "own_answered": 0
+  },
+  "Borjan": {
+   "comments": 850,
+   "buying": 147,
+   "waiting": 107,
+   "own_q": 7,
+   "own_answered": 0
+  },
+  "Servis": {
+   "comments": 1406,
+   "buying": 111,
+   "waiting": 70,
+   "own_q": 7,
+   "own_answered": 0
+  },
+  "Ndure": {
+   "comments": 552,
+   "buying": 73,
+   "waiting": 46,
+   "own_q": 0,
+   "own_answered": 0
+  },
+  "ECS Shoes": {
+   "comments": 394,
+   "buying": 74,
+   "waiting": 40,
+   "own_q": 0,
+   "own_answered": 0
+  },
+  "Hush Puppies Pakistan": {
+   "comments": 400,
+   "buying": 101,
+   "waiting": 55,
+   "own_q": 4,
+   "own_answered": 0
+  },
+  "Insignia": {
+   "comments": 399,
+   "buying": 87,
+   "waiting": 42,
+   "own_q": 2,
+   "own_answered": 1
+  },
+  "Metro Shoes": {
+   "comments": 1494,
+   "buying": 190,
+   "waiting": 155,
+   "own_q": 7,
+   "own_answered": 0
+  },
+  "Stylo": {
+   "comments": 1331,
+   "buying": 249,
+   "waiting": 191,
+   "own_q": 38,
+   "own_answered": 0
+  }
  }
 ]
