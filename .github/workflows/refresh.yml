@@ -49,13 +49,16 @@ jobs:
           pip install --quiet pandas numpy scikit-learn google-api-python-client langdetect sentence-transformers
 
       - name: Collect, analyse and export
+        id: collect
         if: github.event_name != 'push'
+        # if YouTube fails (e.g. daily quota used up), keep last week's data and still publish the site
+        continue-on-error: true
         env:
           YOUTUBE_API_KEY: ${{ secrets.YOUTUBE_API_KEY }}
         run: python engine/src/live/refresh.py --state state --out data.json
 
       - name: Save the new data
-        if: github.event_name != 'push'
+        if: github.event_name != 'push' && steps.collect.outcome == 'success'
         run: |
           git config user.name "USAMA HANIF"
           git config user.email "usamahanif349@gmail.com"
