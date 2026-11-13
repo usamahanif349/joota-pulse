@@ -39,7 +39,6 @@ jobs:
           path: engine
 
       - uses: actions/setup-python@v5
-        if: github.event_name != 'push'
         with:
           python-version: "3.11"
 
@@ -67,8 +66,16 @@ jobs:
       - name: Build the site folder
         run: |
           mkdir _site
-          cp index.html styles.css app.js data.json preview.jpg _site/
+          cp index.html app.html styles.css app.js site.js data.json preview.jpg _site/
           touch _site/.nojekyll
+
+      - name: Take fresh screenshots for the home page
+        run: |
+          pip install --quiet playwright
+          python -m playwright install --with-deps chromium > /dev/null
+          (cd _site && python -m http.server 8000 > /dev/null 2>&1 &)
+          sleep 2
+          python tools/shots.py _site
 
       - uses: actions/upload-pages-artifact@v3
         with:
