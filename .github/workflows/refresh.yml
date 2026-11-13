@@ -1,0 +1,78 @@
+# Weekly live-data refresh for Joota Pulse.
+# Every Monday (02:17 Pakistan time) it collects fresh YouTube comments, re-runs the
+# audience engine (github.com/usamahanif349/pk-footwear-audience-engine) and republishes
+# the site. It also runs on demand (Actions > Weekly data refresh > Run workflow).
+# A push to main only republishes the site, without collecting new data.
+name: Weekly data refresh
+
+on:
+  schedule:
+    - cron: "17 21 * * 0"
+  workflow_dispatch:
+  push:
+    branches: [main]
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    environment:
+      name: github-pages
+      url: ${{ steps.deploy.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Get the audience engine
+        if: github.event_name != 'push'
+        uses: actions/checkout@v4
+        with:
+          repository: usamahanif349/pk-footwear-audience-engine
+          path: engine
+
+      - uses: actions/setup-python@v5
+        if: github.event_name != 'push'
+        with:
+          python-version: "3.11"
+
+      - name: Install
+        if: github.event_name != 'push'
+        run: |
+          pip install --quiet torch --index-url https://download.pytorch.org/whl/cpu
+          pip install --quiet pandas numpy scikit-learn google-api-python-client langdetect sentence-transformers
+
+      - name: Collect, analyse and export
+        if: github.event_name != 'push'
+        env:
+          YOUTUBE_API_KEY: ${{ secrets.YOUTUBE_API_KEY }}
+        run: python engine/src/live/refresh.py --state state --out data.json
+
+      - name: Save the new data
+        if: github.event_name != 'push'
+        run: |
+          git config user.name "USAMA HANIF"
+          git config user.email "usamahanif349@gmail.com"
+          git add state data.json
+          git commit -m "Weekly data refresh $(date -u +%F)" || echo "No changes"
+          git push
+
+      - name: Build the site folder
+        run: |
+          mkdir _site
+          cp index.html styles.css app.js data.json preview.jpg _site/
+          touch _site/.nojekyll
+
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site
+
+      - id: deploy
+        uses: actions/deploy-pages@v4
