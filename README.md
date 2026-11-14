@@ -3,7 +3,9 @@
 **Your customers are asking to buy. Nobody is answering.**
 Joota Pulse finds the shoppers Pakistani footwear brands leave unanswered on YouTube, every week, and hands the marketing team the reply, the customer group and the next campaign.
 
-**Live site:** https://joota-pulse.vercel.app (also on [GitHub Pages](https://usamahanif349.github.io/joota-pulse/)) · **Free brand audit:** [Borjan](https://joota-pulse.vercel.app/audit.html?brand=Borjan), [Servis](https://joota-pulse.vercel.app/audit.html?brand=Servis), [Ndure](https://joota-pulse.vercel.app/audit.html?brand=Ndure) and 5 more
+**Live site:** https://joota-pulse.vercel.app · [GitHub Pages copy](https://usamahanif349.github.io/joota-pulse/)<br>
+**Free brand audit:** [Borjan](https://joota-pulse.vercel.app/audit.html?brand=Borjan), [Servis](https://joota-pulse.vercel.app/audit.html?brand=Servis), [Ndure](https://joota-pulse.vercel.app/audit.html?brand=Ndure) and 5 more<br>
+**Analyst app (Streamlit):** https://pk-footwear-audience-engine.streamlit.app/ (the full analysis: charts, clusters, unusual posts and data tables)
 
 [![Joota Pulse, live screenshot](https://usamahanif349.github.io/joota-pulse/shots/dark/today.jpg)](https://joota-pulse.vercel.app)
 
