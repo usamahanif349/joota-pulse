@@ -80,6 +80,15 @@ jobs:
           sleep 2
           python tools/shots.py _site
 
+      - name: Save the screenshots in the repo (used by the Vercel copy of the site)
+        run: |
+          rm -rf shots && cp -r _site/shots shots && cp _site/preview.jpg preview.jpg
+          git config user.name "USAMA HANIF"
+          git config user.email "usamahanif349@gmail.com"
+          git add shots preview.jpg
+          git commit -m "Fresh screenshots $(date -u +%F)" || echo "No changes"
+          git pull --rebase -q && git push || echo "Push skipped"
+
       - uses: actions/upload-pages-artifact@v3
         with:
           path: _site
