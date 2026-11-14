@@ -1,20 +1,38 @@
 # Joota Pulse
 
-**Audience intelligence for Pakistani footwear brands.** Live app: **https://usamahanif349.github.io/joota-pulse/**
+**Your customers are asking to buy. Nobody is answering.**
+Joota Pulse finds the shoppers Pakistani footwear brands leave unanswered on YouTube, every week, and hands the marketing team the reply, the customer group and the next campaign.
 
-![Joota Pulse home screen](preview.jpg)
+**Live site:** https://usamahanif349.github.io/joota-pulse/ · **Free brand audit:** [Borjan](https://usamahanif349.github.io/joota-pulse/audit.html?brand=Borjan), [Servis](https://usamahanif349.github.io/joota-pulse/audit.html?brand=Servis), [Ndure](https://usamahanif349.github.io/joota-pulse/audit.html?brand=Ndure) and 5 more
 
-Joota Pulse reads 6,724 real public YouTube comments about Borjan, Servis, Ndure, Stylo, Metro, Hush Puppies, Insignia and ECS, and shows a brand's marketing team:
+![Joota Pulse](preview.jpg)
+
+## What a brand gets
 
 - **Missed sales:** buyers who asked about price, stock or delivery and never got a reply (an estimate you can adjust)
-- **Leads inbox:** every waiting buyer, with a ready reply in Roman Urdu or English and a copy button
-- **Your customers:** 11 customer groups and what to do for each
-- **Post this, not that:** content that starts conversations, plus a creator leaderboard
-- **Competitors:** all 8 brands side by side
-- **Campaign ideas:** ready-to-run campaigns with ad copy
-- **Client report:** a one-page snapshot to download as PDF
+- **Leads inbox:** every waiting buyer, with a ready reply in Roman Urdu or English
+- **Brand health score:** 0–100, ranked against 7 competitors every week
+- **Alerts and a Monday digest:** new buyers, complaints and creator leads
+- **Customer groups, campaign ideas and creators:** who is asking, what to post and who already sells for you
+- **Client report and personal audit page:** one page per brand, downloadable as PDF
 
-A static web app (HTML, CSS, JavaScript) hosted free on GitHub Pages. **The data updates itself every week:** a GitHub Action (`.github/workflows/refresh.yml`) collects fresh comments with the YouTube Data API, re-runs the engine and republishes the site; `state/` remembers known videos, when each comment was first seen (for "new" leads) and the history behind the trend line. The analysis behind it (data collection, multilingual AI embeddings, clustering, anomaly detection, Spark benchmark) lives in **[pk-footwear-audience-engine](https://github.com/usamahanif349/pk-footwear-audience-engine)**, which exports `data.json` for this app.
+Covers Borjan, Servis, Ndure, Stylo, Metro, Hush Puppies, Insignia and ECS.
 
-Project 3 of the Big Data Analytics course, UMT Lahore · Usama Hanif.
-Data: public YouTube comments via the official YouTube Data API, collected 12 Nov 2026; commenter names removed. Sample replies and ad copy were written for a class project.
+## How it stays live
+
+A GitHub Action ([`refresh.yml`](.github/workflows/refresh.yml)) runs every Monday:
+
+1. collects fresh public comments with the official YouTube Data API
+2. re-runs the analysis engine and exports `data.json`
+3. retakes the screenshots on the home page and republishes the site
+
+`state/` remembers known videos, when each comment was first seen (so "new" means posted since the last update) and the weekly history. If YouTube collection ever fails, the site keeps last week's data.
+
+**Accuracy rules:** a city, group or campaign figure is only shown when at least 5 comments back it; missed sales is labelled as an estimate; commenter names are never stored.
+
+## Built with
+
+HTML, CSS and JavaScript (no framework), Chart.js, GitHub Pages and GitHub Actions, Playwright for screenshots. The analysis (multilingual embeddings, clustering, anomaly detection, Spark benchmark) lives in **[pk-footwear-audience-engine](https://github.com/usamahanif349/pk-footwear-audience-engine)**.
+
+Built by **Usama Hanif** · [LinkedIn](https://www.linkedin.com/in/usama-hanif-ai/) · Project 3 of the [Big Data Analytics course](https://github.com/usamahanif349/big-data-analytics-course), UMT.
+Independent analysis of public YouTube comments; not affiliated with any brand shown.
