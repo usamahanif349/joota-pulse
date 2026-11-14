@@ -21,7 +21,7 @@ def go(pg, view):
 
 
 with sync_playwright() as p:
-    b = p.chromium.launch()
+    b = p.chromium.launch(args=["--font-render-hinting=none", "--disable-font-subpixel-positioning"])
     for theme in ["dark", "light"]:
         d = out / "shots" / theme
         d.mkdir(parents=True, exist_ok=True)
