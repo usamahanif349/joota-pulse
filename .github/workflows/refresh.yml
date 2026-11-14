@@ -66,6 +66,7 @@ jobs:
           cp engine/data/processed/{comments_labeled.csv,videos_enriched.csv,comment_segments.csv,unusual_posts.csv,clusters.csv,cluster_map.csv,method_metrics.json,pipeline_stats.json} analyst-data/
           git add state data.json analyst-data
           git commit -m "Weekly data refresh $(date -u +%F)" || echo "No changes"
+          git pull --rebase -q
           git push
 
       - name: Build the site folder
