@@ -97,10 +97,10 @@ jobs:
 
       - name: Save the screenshots in the repo (used by the Vercel copy of the site)
         run: |
-          rm -rf shots && cp -r _site/shots shots && cp _site/preview.jpg preview.jpg
+          rm -rf shots && cp -r _site/shots shots && cp _site/preview.jpg preview.jpg && cp _site/og.jpg og.jpg
           git config user.name "USAMA HANIF"
           git config user.email "usamahanif349@gmail.com"
-          git add shots preview.jpg
+          git add shots preview.jpg og.jpg
           git commit -m "Fresh screenshots $(date -u +%F)" || echo "No changes"
           git pull --rebase -X theirs -q && git push || echo "Push skipped"
 

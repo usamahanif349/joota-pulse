@@ -59,6 +59,17 @@ with sync_playwright() as p:
             webp(d / f"crop-{view}.jpg", 1200)
             print("crop", theme, view)
         pg.close()
+    # share card for LinkedIn / WhatsApp: big, readable text, numbers from this week's data
+    import json
+    data = json.loads((out / "data.json").read_text())
+    a_ = data["spaces"]["all"]
+    card = (Path(__file__).parent / "og.html").read_text().replace("{OWN}", str(a_["own_answered"])).replace("{OWNQ}", str(a_["own_q"]))
+    cp = b.new_page(viewport={"width": 1200, "height": 627}, device_scale_factor=2)
+    cp.set_content(card, wait_until="networkidle")
+    cp.evaluate("document.fonts.ready")
+    cp.wait_for_timeout(1200)
+    cp.screenshot(path=str(out / "og.jpg"), type="jpeg", quality=88)
+    print("share card")
     og = b.new_page(viewport={"width": 1200, "height": 630}, device_scale_factor=2)
     og.goto(BASE)
     og.evaluate("""localStorage.setItem('jp_theme', '"dark"')""")
