@@ -110,3 +110,9 @@ jobs:
 
       - id: deploy
         uses: actions/deploy-pages@v4
+
+      - name: Flag a failed data refresh
+        if: steps.collect.outcome == 'failure'
+        run: |
+          echo "::error::The data step failed. The site was republished with last week's data; check the 'Collect, analyse and export' log."
+          exit 1
