@@ -27,7 +27,7 @@ with sync_playwright() as p:
         pg = b.new_page(viewport={"width": 1440, "height": 900}, device_scale_factor=1.25)
         pg.goto(BASE + "app.html")
         pg.evaluate(f"""localStorage.setItem('jp_theme', '"{theme}"'); localStorage.setItem('jp_ws', '"{BRAND}"');
-                        localStorage.setItem('jp_seen', JSON.stringify({{}}))""")
+                        localStorage.setItem('jp_seen', JSON.stringify({{}})); localStorage.setItem('jp_toured', 'true')""")
         for view in ["today", "inbox", "competitors", "digest"]:
             go(pg, view)
             pg.screenshot(path=str(d / f"{view}.jpg"), type="jpeg", quality=80)
@@ -35,7 +35,7 @@ with sync_playwright() as p:
         pg.close()
         pg = b.new_page(viewport={"width": 1340, "height": 1700}, device_scale_factor=1.5)
         pg.goto(BASE + "app.html")
-        pg.evaluate(f"""localStorage.setItem('jp_theme', '"{theme}"'); localStorage.setItem('jp_ws', '"{BRAND}"')""")
+        pg.evaluate(f"""localStorage.setItem('jp_theme', '"{theme}"'); localStorage.setItem('jp_ws', '"{BRAND}"'); localStorage.setItem('jp_toured', 'true')""")
         for view, sel, max_h in CROPS:
             go(pg, view)
             pg.add_style_tag(content=".topbar, .tabbar, .toast { display: none !important; } * { animation: none !important; transition: none !important; }")
