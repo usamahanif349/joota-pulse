@@ -5,7 +5,7 @@ Joota Pulse finds the shoppers Pakistani footwear brands leave unanswered on You
 
 **Live site:** https://usamahanif349.github.io/joota-pulse/ · **Free brand audit:** [Borjan](https://usamahanif349.github.io/joota-pulse/audit.html?brand=Borjan), [Servis](https://usamahanif349.github.io/joota-pulse/audit.html?brand=Servis), [Ndure](https://usamahanif349.github.io/joota-pulse/audit.html?brand=Ndure) and 5 more
 
-![Joota Pulse](preview.jpg)
+[![Joota Pulse, live screenshot](https://usamahanif349.github.io/joota-pulse/shots/dark/today.jpg)](https://usamahanif349.github.io/joota-pulse/)
 
 ## What a brand gets
 
