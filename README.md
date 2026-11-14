@@ -7,7 +7,7 @@ Joota Pulse finds the shoppers Pakistani footwear brands leave unanswered on You
 **Free brand audit:** [Borjan](https://joota-pulse.vercel.app/audit.html?brand=Borjan), [Servis](https://joota-pulse.vercel.app/audit.html?brand=Servis), [Ndure](https://joota-pulse.vercel.app/audit.html?brand=Ndure) and 5 more<br>
 **Analyst app (Streamlit):** https://pk-footwear-audience-engine.streamlit.app/ (the full analysis: charts, clusters, unusual posts and data tables)
 
-[![Joota Pulse, live screenshot](https://usamahanif349.github.io/joota-pulse/shots/dark/today.jpg)](https://joota-pulse.vercel.app)
+[![Joota Pulse, live screenshot](https://usamahanif349.github.io/joota-pulse/shots/dark/today.jpg?v=1114b)](https://joota-pulse.vercel.app)
 
 ## What a brand gets
 
