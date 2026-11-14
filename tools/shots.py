@@ -13,6 +13,15 @@ BRAND = "Borjan"
 CROPS = [("inbox", ".inbox", 620), ("competitors", ".panel", 560), ("customers", ".tiles", 560), ("digest", ".mail", 640)]
 
 
+def webp(path, max_w=1600):
+    """A lighter WebP copy next to each JPEG (the site loads these; the README keeps the JPEG)."""
+    from PIL import Image
+    im = Image.open(path)
+    if im.width > max_w:
+        im = im.resize((max_w, round(im.height * max_w / im.width)), Image.LANCZOS)
+    im.save(str(path)[:-4] + ".webp", "WEBP", quality=74, method=6)
+
+
 def go(pg, view):
     pg.goto(BASE + "app.html#" + view)
     pg.reload(wait_until="networkidle")
@@ -32,6 +41,7 @@ with sync_playwright() as p:
         for view in ["today", "inbox", "competitors", "digest"]:
             go(pg, view)
             pg.screenshot(path=str(d / f"{view}.jpg"), type="jpeg", quality=80)
+            webp(d / f"{view}.jpg")
             print("shot", theme, view)
         pg.close()
         pg = b.new_page(viewport={"width": 1340, "height": 1700}, device_scale_factor=1.5)
@@ -46,6 +56,7 @@ with sync_playwright() as p:
             clip = {"x": max(box["x"] - pad, 0), "y": max(box["y"] - pad, 0), "width": box["width"] + 2 * pad,
                     "height": min(box["height"], max_h) + 2 * pad}
             pg.screenshot(path=str(d / f"crop-{view}.jpg"), type="jpeg", quality=82, clip=clip)
+            webp(d / f"crop-{view}.jpg", 1200)
             print("crop", theme, view)
         pg.close()
     og = b.new_page(viewport={"width": 1200, "height": 630}, device_scale_factor=2)
