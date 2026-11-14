@@ -148,10 +148,10 @@
  {
   "date": "2026-11-14",
   "all": {
-   "comments": 7544,
-   "buying": 1133,
-   "waiting": 786,
-   "own_q": 85,
+   "comments": 7429,
+   "buying": 1114,
+   "waiting": 767,
+   "own_q": 66,
    "own_answered": 1
   },
   "core": {
@@ -210,32 +210,11 @@
    "own_q": 7,
    "own_answered": 0
   },
-  "Starlet": {
-   "comments": 103,
-   "buying": 14,
-   "waiting": 14,
-   "own_q": 14,
-   "own_answered": 0
-  },
   "Stylo": {
    "comments": 1341,
    "buying": 255,
    "waiting": 194,
    "own_q": 39,
-   "own_answered": 0
-  },
-  "Unze London": {
-   "comments": 1,
-   "buying": 1,
-   "waiting": 1,
-   "own_q": 1,
-   "own_answered": 0
-  },
-  "Walkeaze": {
-   "comments": 11,
-   "buying": 4,
-   "waiting": 4,
-   "own_q": 4,
    "own_answered": 0
   }
  }
