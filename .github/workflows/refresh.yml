@@ -69,7 +69,7 @@ jobs:
       - name: Build the site folder
         run: |
           mkdir _site
-          cp index.html app.html audit.html audit.js styles.css app.js site.js data.json preview.jpg _site/
+          cp index.html app.html audit.html audit.js styles.css app.js site.js data.json preview.jpg founder.jpg _site/
           touch _site/.nojekyll
 
       - name: Take fresh screenshots for the home page
