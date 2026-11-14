@@ -14,12 +14,12 @@ Joota Pulse finds the shoppers Pakistani footwear brands leave unanswered on You
 - **Missed sales:** buyers who asked about price, stock or delivery and never got a reply (an estimate you can adjust)
 - **Leads inbox:** every waiting buyer, with a ready reply in Roman Urdu or English; tick each one off as you reply and watch the progress bar
 - **WhatsApp sharing:** send a lead, the weekly digest or a brand's audit to the team in one tap
-- **Brand health score:** 0–100, ranked against 7 competitors every week
+- **Brand health score:** 0–100, ranked against every other brand we track, every week
 - **Alerts and a Monday digest:** new buyers, complaints and creator leads
 - **Customer groups, campaign ideas and creators:** who is asking, what to post and who already sells for you
 - **Client report and personal audit page:** one page per brand, downloadable as PDF
 
-Covers Borjan, Servis, Ndure, Stylo, Metro, Hush Puppies, Insignia and ECS.
+Covers Borjan, Servis, Ndure, Stylo, Metro, Hush Puppies, Insignia and ECS, with Unze London, Walkeaze and Starlet joining as their data comes in.
 
 ## How it stays live
 
