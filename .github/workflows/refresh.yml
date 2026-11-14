@@ -78,7 +78,7 @@ jobs:
           cp engine/data/processed/{comments_labeled.csv,videos_enriched.csv,comment_segments.csv,unusual_posts.csv,clusters.csv,cluster_map.csv,method_metrics.json,pipeline_stats.json} analyst-data/
           git add state data.json analyst-data
           git commit -m "Weekly data refresh $(date -u +%F)" || echo "No changes"
-          git pull --rebase -q
+          git pull --rebase -X theirs -q
           git push
 
       - name: Build the site folder
@@ -102,7 +102,7 @@ jobs:
           git config user.email "usamahanif349@gmail.com"
           git add shots preview.jpg
           git commit -m "Fresh screenshots $(date -u +%F)" || echo "No changes"
-          git pull --rebase -q && git push || echo "Push skipped"
+          git pull --rebase -X theirs -q && git push || echo "Push skipped"
 
       - uses: actions/upload-pages-artifact@v3
         with:
