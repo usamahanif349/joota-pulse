@@ -16,7 +16,8 @@ CROPS = [("inbox", ".inbox", 620), ("competitors", ".panel", 560), ("customers",
 def go(pg, view):
     pg.goto(BASE + "app.html#" + view)
     pg.reload(wait_until="networkidle")
-    pg.wait_for_timeout(2200)
+    pg.evaluate("document.fonts.ready")   # shoot only after the web fonts are in, or spacing comes out wrong
+    pg.wait_for_timeout(2500)
 
 
 with sync_playwright() as p:
@@ -51,6 +52,7 @@ with sync_playwright() as p:
     og.goto(BASE)
     og.evaluate("""localStorage.setItem('jp_theme', '"dark"')""")
     og.reload(wait_until="networkidle")
+    og.evaluate("document.fonts.ready")
     og.wait_for_timeout(2500)
     og.screenshot(path=str(out / "preview.jpg"), type="jpeg", quality=85)
     b.close()
