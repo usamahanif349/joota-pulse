@@ -1,10 +1,10 @@
 {
-  "videos_found": 3821,
+  "videos_found": 5975,
   "videos_kept": 1295,
   "comments_raw": 15337,
   "comments_clean": 13439,
-  "new_comments": 4835,
-  "videos_fetched": 378,
-  "units_used": 6387,
+  "new_comments": 0,
+  "videos_fetched": 0,
+  "units_used": 9000,
   "run_date": "2026-11-15"
 }
