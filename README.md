@@ -19,7 +19,7 @@ Joota Pulse finds the shoppers Pakistani footwear brands leave unanswered on You
 - **Customer groups, campaign ideas and creators:** who is asking, what to post and who already sells for you
 - **Client report and personal audit page:** one page per brand, downloadable as PDF
 
-Covers Borjan, Servis, Ndure, Stylo, Metro, Hush Puppies, Insignia and ECS, with Unze London, Walkeaze and Starlet joining as their data comes in.
+Covers 11 brands: Borjan, Servis, Ndure, Stylo, Metro, Hush Puppies, Insignia, ECS, Starlet, Walkeaze and Unze London. As of 15 Nov 2026: 3,400+ posts and 13,000+ cleaned comments, growing every week.
 
 ## How it stays live
 
