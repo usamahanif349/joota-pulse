@@ -315,93 +315,93 @@
  {
   "date": "2026-11-16",
   "all": {
-   "comments": 11341,
-   "buying": 1823,
-   "waiting": 1246,
-   "own_q": 89,
+   "comments": 16621,
+   "buying": 2741,
+   "waiting": 1849,
+   "own_q": 90,
    "own_answered": 1
   },
   "core": {
-   "comments": 4437,
-   "buying": 603,
-   "waiting": 383,
-   "own_q": 14,
+   "comments": 5749,
+   "buying": 892,
+   "waiting": 531,
+   "own_q": 15,
    "own_answered": 0
   },
   "Borjan": {
-   "comments": 1206,
-   "buying": 212,
-   "waiting": 144,
+   "comments": 1783,
+   "buying": 328,
+   "waiting": 206,
    "own_q": 7,
    "own_answered": 0
   },
   "Servis": {
-   "comments": 1852,
-   "buying": 185,
-   "waiting": 127,
-   "own_q": 7,
+   "comments": 2074,
+   "buying": 261,
+   "waiting": 176,
+   "own_q": 8,
    "own_answered": 0
   },
   "Ndure": {
-   "comments": 1379,
-   "buying": 206,
-   "waiting": 112,
+   "comments": 1892,
+   "buying": 303,
+   "waiting": 149,
    "own_q": 0,
    "own_answered": 0
   },
   "ECS Shoes": {
-   "comments": 780,
-   "buying": 146,
-   "waiting": 92,
+   "comments": 1298,
+   "buying": 277,
+   "waiting": 189,
    "own_q": 0,
    "own_answered": 0
   },
   "Hush Puppies Pakistan": {
-   "comments": 1061,
-   "buying": 219,
-   "waiting": 153,
+   "comments": 1275,
+   "buying": 250,
+   "waiting": 176,
    "own_q": 4,
    "own_answered": 0
   },
   "Insignia": {
-   "comments": 469,
-   "buying": 109,
-   "waiting": 61,
+   "comments": 1039,
+   "buying": 208,
+   "waiting": 136,
    "own_q": 2,
    "own_answered": 1
   },
   "Metro Shoes": {
-   "comments": 1570,
-   "buying": 205,
-   "waiting": 161,
+   "comments": 2552,
+   "buying": 266,
+   "waiting": 210,
    "own_q": 7,
    "own_answered": 0
   },
   "Starlet": {
-   "comments": 276,
-   "buying": 54,
-   "waiting": 44,
-   "own_q": 15,
+   "comments": 348,
+   "buying": 72,
+   "waiting": 61,
+   "own_q": 16,
    "own_answered": 0
   },
   "Stylo": {
-   "comments": 1488,
-   "buying": 286,
-   "waiting": 214,
-   "own_q": 42,
+   "comments": 2426,
+   "buying": 454,
+   "waiting": 327,
+   "own_q": 41,
    "own_answered": 0
   },
   "Unze London": {
-   "comments": 702,
-   "buying": 107,
-   "waiting": 64,
+   "comments": 1351,
+   "buying": 223,
+   "waiting": 141,
    "own_q": 1,
    "own_answered": 0
   },
   "Walkeaze": {
-   "comments": 558,
-   "buying": 94,
-   "waiting": 74,
+   "comments": 583,
+   "buying": 99,
+   "waiting": 78,
    "own_q": 4,
    "own_answered": 0
   }

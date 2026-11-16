@@ -1,20 +1,20 @@
 {
-  "knn_cv_accuracy": 0.829,
-  "labelled_by_word_list": 7435,
-  "labelled_by_neighbours": 1292,
+  "knn_cv_accuracy": 0.832,
+  "labelled_by_word_list": 10725,
+  "labelled_by_neighbours": 2045,
   "k": 20,
   "silhouette_by_k": {
-    "8": 0.1448,
-    "10": 0.1556,
-    "12": 0.1475,
-    "14": 0.1495,
-    "16": 0.1543,
-    "18": 0.1589,
-    "20": 0.16
+    "8": 0.1221,
+    "10": 0.1311,
+    "12": 0.1437,
+    "14": 0.1492,
+    "16": 0.1486,
+    "18": 0.1499,
+    "20": 0.1503
   },
-  "nmi_embeddings_vs_needs": 0.434,
-  "nmi_tfidf_vs_needs": 0.332,
-  "comments": 13396,
-  "customer_comments": 11341,
-  "videos": 1285
+  "nmi_embeddings_vs_needs": 0.407,
+  "nmi_tfidf_vs_needs": 0.286,
+  "comments": 19580,
+  "customer_comments": 16621,
+  "videos": 1962
 }
